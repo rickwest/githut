@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    {{ profile.login }}{% if profile.name %}&nbsp;({{ profile.name }}){% endif %}
+{% endblock %}
+
+{% block body %}
+<div class="row content">
+    <div class="col-sm-3">
+        {% include ':default/partials:profileSidebar.html.twig' %}
+    </div>
+    <div class="col-sm-9">
+        <div class="col-sm-12 content">
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">Overview</a></li>
+                {% for data in profile.data %}
+                    <li role="presentation"><a href="{{ data.url }}">{{ data.name }}&nbsp;<span class="badge">{{ data.value }}</span></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-dark">Repositories</h3>
+                </div>
+                <div class="panel-body">
+                {% for repo in repos %}
+                    <a href="{{ repo.html_url }}" class="lead"><strong>{{ repo.name }}</strong></a></p>
+                        <p>{{ repo.description }}</p>
+                    <span class="small" aria-hidden="true"><i class="fa fa-laptop"></i>&nbsp;{{ repo.language }}</span>
+                        <span class="small"><i class="fa fa-star"></i>&nbsp;{{ repo.stargazers_count }}</span>
+                    <span class="small"><i class="fa fa-code-fork"></i>&nbsp;{{ repo.forks }}</span>
+                    <hr>
+                {% endfor %}
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

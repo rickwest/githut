@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="landing-block">
+    <img class="githut-logo image-responsive" src="{{ asset('githut-logo.png') }}" alt="">
+    <p class="lead text-dark">It's just like GitHub...<br>err...actually no, it's nothing like it!</p>
+    <p>This is just a little project built using PHP, Symfony and the Github Api. Nothing exciting here!</p>
+</div>
+<div class="text-center col-md-8 col-md-offset-2">
+    <p class="lead text-dark">Simply enter a username to view a Git Hub profile.</p>
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+    {{ form_start(form) }}
+    <div class="form-group">
+        {{ form_widget(form.username, {'attr': {'class':'form-control'}}) }}
+    </div>
+    {{ form_row(form.search, {'attr': {'class':'btn btn-default'}}) }}
+    {{ form_end(form) }}
+</div>
+{% endblock %}

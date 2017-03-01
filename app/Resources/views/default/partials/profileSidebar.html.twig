@@ -1,0 +1,19 @@
+<img src="{{ profile.avatar }}" class="img-responsive img-rounded">
+<h2 class="text-dark">{{ profile.name }}</h2>
+<p>{{ profile.login }}</p>
+<p class="text-muted">{{ profile.bio }}</p>
+<hr>
+<ul class="list-unstyled">
+    {% if profile.company %}
+        <li><i class="fa fa-users"></i><span class="text-dark">&nbsp;{{ profile.company }}</span></li>
+    {% endif %}
+    {% if profile.location %}
+            <li><i class="fa fa-map-marker"></i><span class="text-dark">&nbsp;{{ profile.location }}</span></li>
+    {% endif %}
+    {% if profile.email %}
+        <li><i class="fa fa-envelope-o"></i><span class="text-dark">&nbsp;{{ profile.email }}</span></li>
+    {% endif %}
+    {% if profile.blog %}
+        <li><i class="fa fa-link" ></i>&nbsp;<a href="{{ profile.blog }}">{{ profile.blog }}</a></li>
+    {% endif %}
+</ul>

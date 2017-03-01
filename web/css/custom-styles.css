@@ -1,0 +1,64 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    margin-bottom: 60px;
+    color: #767676;
+}
+.landing-block {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: auto;
+    max-width: 1000px;
+    /*padding: 0 15px;*/
+}
+footer .container .text-muted {
+    margin: 20px 0;
+}
+
+.content {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.text-dark {
+    color: #333333
+}
+
+.panel-body .small {
+    padding-right: 20px;
+}
+
+li {
+    padding-top:5px;
+}
+
+.list-unstyled .fa {
+    width: 20px;
+}
+
+.githut-logo {
+    width:400px;
+    max-width: 100%;
+}
+
+.nav .badge {
+    background-color: #337ab7;
+}
+
